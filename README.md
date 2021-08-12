@@ -1,17 +1,24 @@
 # Shop Angular Cloudfront
 
-## Manual deploy:
+## Manual Deployment:
 AWS S3:  
 http://shop-angular-cloudfront.s3-website-eu-west-1.amazonaws.com/ (403 - Forbidden - Access Denied)
 
 AWS CloudFront:  
 https://d236jnb5b51m1q.cloudfront.net
 
+----
+## Automated Deployment Using serverless-single-page-app Plugin:
+AWS S3: 
+http://shop-angular-cloudfront-serverless.s3-website-eu-west-1.amazonaws.com/ (403 - Forbidden - Access Denied)
+
+AWS CloudFront:  
+https://d20gmrtsha1y5a.cloudfront.net/
+
+----
+Original repo maintainers: [Sergey Gultyayev](https://github.com/gultyaev)
+
 Angular version: ~12.
-
-Repo maintainers:
-
-- [Sergey Gultyayev](https://github.com/gultyaev)
 
 ## The purpose
 
