@@ -1,12 +1,5 @@
 # Shop Angular Cloudfront
 
-## Manual Deployment:
-AWS S3:  
-http://shop-angular-cloudfront.s3-website-eu-west-1.amazonaws.com/ (403 - Forbidden - Access Denied)
-
-AWS CloudFront:  
-https://d236jnb5b51m1q.cloudfront.net
-
 ----
 ## Automated Deployment Using serverless-single-page-app Plugin:
 AWS S3: 
@@ -42,4 +35,8 @@ Follow the steps:
 
 - git clone
 - npm i
-- ng serve
+- npm start
+- npm run cloudfront:setup:build:deploy - initial setup of CloudFront & S3 bucket
+- npm run s3:build:deploy - to run app build and deploy it to S3 bucket
+- npm run cloudfront:invalidateCache - to invalidate deployed CloudFront cache
+- npm run cloudfront:build:deploy - to run app build and deploy it to S3 bucket & invalidate deployed CloudFront cache
