@@ -2,7 +2,14 @@
   <div mat-card-image class="img-container">
     <div class="img-container__inner">
       <!-- <img src="https://source.unsplash.com/random?sig={{ index }}" alt="" /> -->
-      <img src="{{ product.src }}" alt="" />
+      <img
+        src="{{
+          product.src ||
+            'https://images.unsplash.com/photo-1563357989-f6cdbbae76cb?width=500'
+        }}"
+        onError="this.src='https://images.unsplash.com/photo-1563357989-f6cdbbae76cb?width=500'"
+        alt=""
+      />
     </div>
   </div>
 
@@ -21,6 +28,7 @@
     <button
       #cartBtn
       *ngIf="(countInCart$ | async) === 0"
+      [disabled]="!product.count || !product.price"
       (click)="add()"
       color="primary"
       matTooltip="Add {{ product.title }} to cart"
