@@ -14,6 +14,8 @@ export class ManageProductsComponent implements OnInit {
 
   selectedFile: File | null = null;
 
+  isLoading = false;
+
   products$!: Observable<Product[]>;
 
   constructor(
@@ -27,7 +29,10 @@ export class ManageProductsComponent implements OnInit {
   }
 
   onUploadCSV(): void {
+    this.isLoading = true;
+
     if (!this.selectedFile) {
+      this.isLoading = false;
       return;
     }
 
@@ -35,6 +40,7 @@ export class ManageProductsComponent implements OnInit {
       .uploadProductsCSV(this.selectedFile)
       .subscribe(() => {
         this.selectedFile = null;
+        this.isLoading = false;
         this.cdr.markForCheck();
       });
   }

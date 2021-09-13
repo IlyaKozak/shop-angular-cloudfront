@@ -9,6 +9,7 @@ import { ManageProductsComponent } from './manage-products/manage-products.compo
 import { MatButtonModule } from '@angular/material/button';
 import { FilePickerModule } from '../shared/file-picker/file-picker.module';
 import { ManageProductsService } from './manage-products/manage-products.service';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [OrdersComponent, ManageProductsComponent],
@@ -18,6 +19,7 @@ import { ManageProductsService } from './manage-products/manage-products.service
     MatTableModule,
     MatButtonModule,
     FilePickerModule,
+    MatProgressSpinnerModule,
   ],
   providers: [OrdersService, ManageProductsService],
 })
