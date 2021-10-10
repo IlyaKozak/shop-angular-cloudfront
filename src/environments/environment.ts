@@ -8,7 +8,7 @@ export const environment: Config = {
   production: false,
   apiEndpoints: {
     product:
-      'https://zz73b76oel.execute-api.eu-west-1.amazonaws.com/rds/products',
+      'https://racul759t9.execute-api.eu-west-1.amazonaws.com/dev/products',
     order: 'https://.execute-api.eu-west-1.amazonaws.com/dev',
     import: 'https://xc76c6s438.execute-api.eu-west-1.amazonaws.com/dev',
     bff: 'https://zz73b76oel.execute-api.eu-west-1.amazonaws.com/rds',
