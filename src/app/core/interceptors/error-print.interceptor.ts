@@ -20,11 +20,9 @@ export class ErrorPrintInterceptor implements HttpInterceptor {
   ): Observable<HttpEvent<unknown>> {
     return next.handle(request).pipe(
       tap({
-        error: ({ status, error: { message } }: unknown) => {
-          const url = new URL(request.url);
-
+        error: ({ status, error: { message } }) => {
           this.notificationService.showError(
-            `Request to "${url}" failed with HTTP Status ${status}: 
+            `Request failed with HTTP Status ${status}: 
             ${
               status === 403 ? 'Forbidden' : message
             }. Check the console for the details`,

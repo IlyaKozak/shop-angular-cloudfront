@@ -28,6 +28,12 @@ export class ManageProductsComponent implements OnInit {
     this.products$ = this.productsService.getProducts();
   }
 
+  fileChange(file: File | null): void {
+    if (file === null) {
+      this.isLoading = false;
+    }
+  }
+
   onUploadCSV(): void {
     this.isLoading = true;
 

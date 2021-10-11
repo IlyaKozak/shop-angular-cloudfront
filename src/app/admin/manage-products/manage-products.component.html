@@ -1,7 +1,11 @@
 <h1>Manage products</h1>
 
 <div class="container">
-  <app-file-picker [(file)]="selectedFile" (uploadClick)="onUploadCSV()">
+  <app-file-picker
+    [(file)]="selectedFile"
+    (uploadClick)="onUploadCSV()"
+    (fileChange)="fileChange(selectedFile)"
+  >
   </app-file-picker>
   <mat-spinner *ngIf="selectedFile && isLoading" diameter="40"></mat-spinner>
 </div>
