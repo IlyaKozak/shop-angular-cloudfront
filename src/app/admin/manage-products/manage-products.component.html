@@ -3,7 +3,7 @@
 <div class="container">
   <app-file-picker [(file)]="selectedFile" (uploadClick)="onUploadCSV()">
   </app-file-picker>
-  <mat-spinner *ngIf="isLoading" diameter="40"></mat-spinner>
+  <mat-spinner *ngIf="selectedFile && isLoading" diameter="40"></mat-spinner>
 </div>
 
 <table class="w-100" [dataSource]="products$" mat-table>
